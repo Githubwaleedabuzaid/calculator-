@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.h{
+    transform: translate(-350px, -250px);
+    font-size: 30px;
+}
+.dark .h{
+    color: #fff;
+}
+body
+{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background-color: #e6ecf0;
+}
+.dark{
+    background: #232a2e;
+}
+.calculater{
+    position: relative;
+    width: 340px;
+    padding: 40px;
+    box-shadow: 15px 15px 20px rgb(0, 0, 0,0.1),
+    -15px -15px 20px rgba(255, 255, 255, 0.733);
+    border: 2px solid #a7acaf;
+    border-radius: 20px;
+
+}
+.dark .calculater{
+    background: #33393e;
+    box-shadow: 15px 15px 20px rgb(0, 0, 0,0.25),
+    -15px -15px 20px rgba(255, 255, 255, 0.1);
+}
+.calculater .buttons{
+    position: relative;
+    display: grid;
+    border-radius: 12px;
+}
+.calculater .buttons #value{
+    position: relative;
+    grid-column: span 4;
+    user-select: none;
+    overflow: none;
+    width: 100%;
+    text-align: end;
+    color: #5166d5;
+    height: 120px;
+    line-height: 100px;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0,0.1),
+    inset -5px -5px 20px #fff;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    padding: 0 20px;
+    font-size: 2em;
+    font-weight: 500;
+}
+.dark .calculater .buttons #value{
+    background: #33393e;
+    color: #eee;
+    box-shadow: inset 15px 15px 20px rgb(0, 0, 0,0.5),
+    inset -15px -15px 20px rgba(255, 255, 255, 0.1);
+}
+.calculater .buttons span
+{
+    position: relative;
+    padding: 10px;
+    box-shadow:  5px 5px 10px rgba(58, 58, 58, 0.1),
+    -5px -5px 5px rgb(92, 110, 112);
+    margin: 10px;
+    cursor: pointer;
+    user-select: none;
+    min-width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    color: #666;
+    border: 2px solid #edf1f4;
+    box-shadow:  5px 5px 10px rgba(46, 46, 46, 0.1),
+    -5px -5px 5px rgb(95, 111, 116);
+    border-radius: 10px;
+}
+.dark .calculater .buttons span
+{
+    color: #eee;
+    border: 2px solid #333;
+    box-shadow:  5px 5px 10px rgba(141, 141, 141, 0.25),
+    -5px -5px 10px rgba(48, 45, 45, 0.1) ;
+}
+
+.calculater .buttons span:active
+{
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0,0.25),
+    inset -5px -5px 10px rgba(0,0,0,0.1);
+    color: red;
+}
+.dark .calculater .buttons span:active{
+    box-shadow:  15px 15px 20px rgba(65, 62, 62, 0.25),
+     -15px -15px 20px rgba(70, 70, 70, 0.1);
+}
+.dark .calculater .buttons span:active{
+    box-shadow:  5px 5px 10px rgba(46, 46, 46, 0.25),
+    -5px -5px 10px rgba(255, 255, 255, 0.1) ;
+}
+.calculater .buttons span#clear
+{
+    grid-column: span 2;
+    background: darkgreen;
+    color: #fff;
+    border: 2px solid #edf1f4;
+}
+.calculater .buttons span#plus
+{
+    grid-row: span 2;
+    background: green;
+    color: #fff;
+    border: 2px solid #edf1f4;
+}
+.calculater .buttons span#equal
+{
+    grid-row: span 2;
+    background: blue;
+    color: #fff;
+    border: 2px solid #edf1f4;
+}
+.calculater .buttons span#clear:active,
+.calculater .buttons span#plus:active,
+.calculater .buttons span#equal:active
+{
+box-shadow: 5px 5px 10px rgba(0, 0, 0,0.1),
+-5px -5px 10px #fff,
+inset  5px 5px 10px rgba(0, 0, 0,0.1) ;
+}
+.dark .calculater .buttons span#clear,
+.dark .calculater .buttons span#plus,
+.dark .calculater .buttons span#equal
+{
+    border: 2px solid #333;
+}
+.dark .calculater .buttons span#clear:active,
+.dark .calculater .buttons span#plus:active,
+.dark .calculater .buttons span#equal:active
+{
+box-shadow: 5px 5px 10px rgba(0, 0, 0,0.1),
+-5px -5px 10px rgb(61, 61, 61),
+inset  5px 5px 10px rgba(0, 0, 0,0.1) ;
+}
+.togg{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #555;
+    cursor: pointer;
+    border: 2px solid #edf1f4;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0,0.1)
+    -5px -5px 10px #fff;
+}
+.dark .togg{
+background: #e6ecf0;
+border: 2px solid #333;
+box-shadow: 5px 5px 10px rgba(0, 0, 0,0.1)
+-5px -5px 10px #fff;
+}
